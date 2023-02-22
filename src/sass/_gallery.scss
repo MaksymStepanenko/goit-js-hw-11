@@ -1,0 +1,64 @@
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: tomato;
+    // position: fixed;
+    width: 100%;
+}
+
+.search-form {
+    position: relative;
+}
+
+.search-form input {
+    
+    padding: 5px;
+    border: 1px solid tomato;
+    border-radius: 5px;
+    min-width: 300px;
+    &:active {
+    
+    }
+}
+
+
+.search-btn {
+   position: absolute;
+   right: 0;
+   padding: 5px;
+    border: 1px solid tomato;
+    border-radius: 5px;
+    background-color: white;
+    color: tomato;
+    &:hover{
+        background-color: tomato;
+        color: white;
+        border: 1px solid white;
+    }
+
+}
+
+.icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    stroke-width: 0;
+    stroke: red;
+    fill: black;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+.photo-card {
+    width: 300px;
+}
+
+.image {
+    width: 300px;
+    height: 200px;
+}
