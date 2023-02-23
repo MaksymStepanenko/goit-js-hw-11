@@ -30,14 +30,14 @@ body {
   font-size: 20px;
   border: none;
   padding: 10px 15px;
-  border-radius: 10px;
   border: 1px solid tomato;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: white;
   color: tomato;
   &:hover {
-    background-color: #ba3b24;
-    color: white;
+    background-color: #f7d8d3 ;
+    // color: white;
+    // box-shadow: 3px 3px 5px white;
   }
   cursor: pointer;
 }
@@ -70,6 +70,10 @@ body {
    display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 3px 3px 5px #ba3b244f;
+    &:hover{
+        box-shadow: 6px 6px 10px #ba3b244f;
+    }
 }
 
 button.load-more {
@@ -85,6 +89,9 @@ button.load-more {
   background-color: tomato;
   color: white;
   cursor: pointer;
+  &:hover{
+    box-shadow: 3px 3px 5px #ba3b244f;
+  }
 }
 
 // button:disabled {
@@ -115,4 +122,8 @@ button.visually-hidden {
 
 .icon:hover {
   fill: #ba3b24;
+}
+
+.title {
+    margin-top: 250px;
 }

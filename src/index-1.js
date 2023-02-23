@@ -16,6 +16,8 @@ const loadMoreBtn = new LoadMoreBtn({ selector: '.load-more', isHidden: true });
 refs.form.addEventListener('submit', searchImg);
 loadMoreBtn.button.addEventListener('click', fetchImages);
 
+hiTitle()
+
 let totalPages = null;
 
 const lightbox = new SimpleLightbox('.gallery a');
@@ -29,6 +31,8 @@ function searchImg(e) {
     Notify.failure(
       'Sorry, there are no images matching your search query. Please try again.'
     );
+    hiTitle()
+    loadMoreBtn.hide();
     return;
   }
 
@@ -53,6 +57,7 @@ async function fetchImages() {
         'Sorry, there are no images matching your search query. Please try again.'
       );
       clearImages();
+      hiTitle();
       loadMoreBtn.hide();
       return;
     }
@@ -139,4 +144,8 @@ function scrollTheCollection() {
     top: cardHeight * 2,
     behavior: 'smooth',
   });
+}
+
+function hiTitle() {
+  refs.gallery.innerHTML = '<h1 class="title">enter your query in the search field</h1>';
 }
